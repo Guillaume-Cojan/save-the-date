@@ -29,12 +29,13 @@ body {
         rgba(73, 0, 33, 1) 100%
     );
     color: white;
-    clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .counter-circles {
+    margin-left: 20%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 500px;
 }
@@ -130,12 +131,13 @@ body {
     .counter-container {
         width: 100%;
         padding: 4% 0%;
-        clip-path: none;
+        -webkit-clip-path: none;
     }
     .counter-circles {
         justify-content: center;
         width: 100%;
         max-width: none;
+        margin-left: 0;
     }
     .counter-circle {
         width: 120px;
