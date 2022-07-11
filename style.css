@@ -58,6 +58,7 @@ h1 {
     height: 155px;
     border: 3px solid white;
     backdrop-filter: blur(3px) grayscale(20%) brightness(90%);
+    -webkit-backdrop-filter: blur(3px) grayscale(20%) brightness(90%);
     border-radius: 50%;
     margin: 3% 3%;
     display: flex;
