@@ -6,9 +6,23 @@ body {
     color: #555555;
 }
 
+h1 {
+    font-family: "Oleo Script";
+    font-size: 3.6em;
+    color: #c99396;
+    text-align: center;
+    margin: 4% 0;
+}
+
 .p-light {
     color: #999999;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.signature {
+    color: #c99396;
+    font-family: "Oleo Script";
+    font-size: 1.6em;
 }
 
 .main-container {
@@ -21,19 +35,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
-    background: rgb(94, 103, 180);
-    background: linear-gradient(
-        56deg,
-        rgba(94, 103, 180, 1) 0%,
-        rgba(73, 0, 33, 1) 100%
-    );
+    width: 70%;
+    background-image: url("assets/wall3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
     color: white;
     -webkit-clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .counter-circles {
-    margin-left: 20%;
+    margin-left: 35%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -43,7 +56,8 @@ body {
 .counter-circle {
     width: 155px;
     height: 155px;
-    border: 1px solid white;
+    border: 3px solid white;
+    backdrop-filter: blur(3px) grayscale(20%) brightness(90%);
     border-radius: 50%;
     margin: 3% 3%;
     display: flex;
@@ -51,6 +65,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.4s;
+    font-family: "Oleo Script";
 }
 
 .counter-circle:hover {
@@ -73,7 +88,7 @@ body {
     justify-content: space-between;
     width: 25%;
     margin: 0;
-    padding: 45px 0px 45px 75px;
+    padding: 35px 0px 55px 75px;
     background-color: none;
 }
 
@@ -87,39 +102,47 @@ body {
     flex-wrap: wrap;
 }
 
-.welcome-top-logo {
-    width: 320px;
-    margin: 0;
-}
-
 .welcome-details {
     font-family: "Poppins", sans-serif;
 }
 
 .welcome-details-main {
-    font-size: 24px;
-    margin: 15% 0;
+    font-size: 1.3em;
+    margin-bottom: 15%;
+    width: 120%;
 }
 
-.social-a {
-    text-decoration: none;
+.counter-label {
+    font-size: 140%;
 }
 
-.social-link {
-    width: 36px;
-    height: 36px;
-    margin-right: 2%;
-    transition: filter 0.2s ease-in-out;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
+.rsvp-container {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-link:hover {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+.rsvp-container button {
+    border-radius: 50px;
+    background-color: #6daab3;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #588991;
+    transition: 0.2s ease-in-out;
 }
 
 @media (max-width: 1065px) {
+    h1 {
+        font-size: 3.2em;
+    }
     .main-container {
         flex-direction: column;
         height: 100%;
@@ -144,7 +167,7 @@ body {
         font-size: 2.5rem;
     }
     .counter-label {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     .welcome-intro {
         width: 100%;
@@ -156,11 +179,15 @@ body {
         margin: 0;
     }
     .welcome-container {
-        width: 90%;
-        padding: 2% 5%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2% 8%;
+        max-width: 635px;
+        margin: auto;
     }
     .welcome-details-main {
-        margin: 9% 0;
+        margin: 6% 0 14% 0;
+        width: 100%;
     }
     .social-links {
         margin: 8% 0%;
